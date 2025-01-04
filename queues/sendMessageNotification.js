@@ -125,7 +125,7 @@ const updateSessionStatusAgenda = async () => {
     await agenda.start();
 
     await agenda.cancel({ name: "send message notification" });
-    await agenda.every("5 minutes", "send message notification");
+    await agenda.every("1 hour", "send message notification"); //i have changed this 5 minutes to 1 hour to reduce the server load
 };
 
 module.exports = updateSessionStatusAgenda;
