@@ -94,6 +94,9 @@ const userController = {
                 _id: {
                     $ne: req.user._id,
                 },
+                verified_at: {
+                    $ne: null,
+                },
             };
 
             if (skills_offering !== "") {
